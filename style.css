@@ -194,6 +194,7 @@ header .dropdown-menu ul li a {
     font-size: 2rem;
     grid-column: 2;
     align-self: flex-start;
+    text-align: justify;
 }
 
 .image2 {
