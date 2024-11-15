@@ -1,0 +1,294 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --font-family-1: "Audiowide", san-serif;
+}
+
+/* This the style for the body/html */
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    scroll-behavior: smooth;
+    background-color: black;
+}
+
+.back-video {
+    min-width: 100%;
+    min-height: 100%;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+
+/* This is my Class Container Style */
+.container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow:visible;
+    scroll-snap-type: y mandatory;
+    padding: 30px;
+}
+
+/* Style for Navigation */
+nav {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 40px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    z-index: 1;
+}
+
+nav ul {
+    position: fixed;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    font-family: "Audiowide", sans-serif;
+}
+
+nav ul li a:hover {
+    color: gray;
+}
+
+/* Style for Class "content" */
+.content {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    scroll-snap-align: start;
+}
+
+/* Style for the Class "me-content and expi-content" */
+.expi-content, .me-content {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    align-items: center;
+}
+
+/* Style for Homepage */
+.home-content h1 {
+    font-size: 100px;
+    color: white;
+    text-align: center;
+    font-weight: 500px;
+    font-family: var(--font-family-1);
+}
+
+.home-content h1:hover {
+    -webkit-text-stroke: 2px white;
+    color: transparent;
+}
+
+/* Style for About Me Content */
+.me-content h1 {
+    font-family: var(--font-family-1);
+    font-size: 4rem;
+    color: white;
+    align-self: self-end;
+}
+
+.me-content h2 {
+    height: 500px;
+    font-family: var(--font-family-1);
+    font-size: 2rem;
+    text-align: justify;
+    color: white;
+    order: 1;
+}
+
+.image1 {
+    width: 800px;
+    grid-row: span 2;
+}
+
+/* Style for Experience Content*/
+.expi-content h1 {
+    font-family: var(--font-family-1);
+    color: white;
+    font-size: 5rem;
+    align-self: flex-end;
+    grid-column: 2 / 3;
+}
+
+.expi-content h3 {
+    font-family: var(--font-family-1);
+    color: white;
+    font-size: 2rem;
+    grid-column: 2 / 4;
+    align-self: center;
+}
+
+.expi-content h2 {
+    font-family: var(--font-family-1);
+    color: white;
+    font-size: 2rem;
+    padding-right: 10px;
+    grid-column: 2;
+    align-self: flex-start;
+}
+
+.image2 {
+    width: 800px;
+    grid-row: 1 / 4;
+}
+
+/* Style for Skills Content*/
+.skill-content {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    gap: 10px;
+}
+.skill-content h1 {
+    font-family: var(--font-family-1);
+    color: white;
+    font-size: 6rem;
+    align-self: self-end;
+}
+
+.skill-content ul {
+    font-family: var(--font-family-1);
+    font-size: 3rem;
+    color: white;
+    align-self: self-start;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    width: 300px;
+    display: inline-block;
+    padding: 50px;
+    grid-column: span 3;
+}
+
+/* Style for Footer*/
+footer {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 100vw;
+    z-index: 1;
+}
+
+footer .footer-content {
+    padding: 10px;
+}
+
+footer .social-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-content li{
+    display: inline-block;
+    text-decoration: none;
+}
+
+.social-content li a i {
+    padding: 10px 30px;
+    color: white;
+    font-size: 50px;
+}
+
+.social-content li a i:hover {
+    color: gray;
+}
+
+footer .footer-content p {
+    color: white;
+    font-family: var(--font-family-1);
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+/* This is animated when scrolling */
+.image {
+    opacity: 0;
+    transition: opacity 500ms;
+}
+
+.image.scrolled {
+    opacity: 1;
+}
+
+.scrolled.slide-right {
+    animation: slide-in-right 1s ease-in-out both;
+}
+
+.scrolled.slide-left {
+    animation: slide-in-left 1s ease-in-out both;
+}
+
+.scrolled.fade-in {
+    animation: fade-in 1s ease-in-out both;
+}
+
+/* This is the key-frame for animation */
+@keyframes slide-in-left {
+    0% {
+      -webkit-transform: translateX(-100px);
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+      opacity: 1;
+    }
+}
+  
+@keyframes slide-in-right {
+    0% {
+      -webkit-transform: translateX(100px);
+      transform: translateX(100px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+      opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="icon" href="./images/JB (1).png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <!-- This is where my code in background video -->
+    <!-- Autoplay so when you open the web it will play automatically without a sound and in a loop state -->
+    
+    <video autoplay loop muted class="back-video">
+        <source src="videos/video.mp4" type="video/mp4">
+    </video>
+
+    <div class="container">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#Me">About Me</a></li>
+                    <li><a href="#Experience">Work Experience</a></li>
+                    <li><a href="#Skills">Skills</a></li>
+                    <div class="animation start-home"></div>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="home-content content" id="Home">
+            <h1>Welcome to my Resume Website</h1>
+        </div>
+        
+        <div class="me-content content" id="Me">
+            <h1>Hi, I'm Bernard T. Arevalo</h1>
+            <h2>
+                I am 33 years old and hold a Bachelor of Science in Information Technology from Bulacan State University. 
+                I previously worked as a Surveillance Operator and am now pursuing further education in the IT field to 
+                enhance my skills and stay current with industry advancements.
+            </h2>
+            <img class="image image1 slide-right " src="/images/rb_3863.png" alt="person">
+        </div>
+
+        <div class="expi-content content" id="Experience">
+            <h1>Surveillance Operator</h1>
+            <h3>Paramount Human Resources Multi-Purpose Cooperative <br>(June 16, 2018 - June 30, 2024)</h3>
+            <h2>
+                As a Surveillance/CCTV Operator assigned to 
+                <a href="https://nsmmi.com.ph/" style="text-decoration: none; color: yellow;" target="_blank" rel="noopener norefferer">
+                    Meat Merchants Inc.
+                </a> 
+                , my primary role encompasses the meticulous monitoring, inspection, and maintenance of the surveillance system, particularly the CCTV cameras. 
+                This integral responsibility is crucial for upholding the safety and security of the property and premises, as it allows for continuous 
+                surveillance and timely response to any security-related incidents.
+            </h2>
+            <img class="image image2 slide-left" src="/images/rb_13665.png" alt="Monitor with CCTV Camera inside">
+        </div>
+
+        <div class="skill-content content" id="Skills">
+            <h1>
+                Knowlegdeable in:
+            </h1>
+            <div class="logo">
+                <img class="image slide-left" src="/images/html-5_5968267.png" alt="HTML Logo">
+                <img class="image fade-in" src="/images/css_919826.png" alt="CSS Logo">
+                <img class="image slide-right" src="/images/js_5968292.png" alt="Javascript Logo">
+            </div>
+            <ul>
+                <li>HTML (Hypertext Markup Langauge)</li>
+                <li>CSS (Cascading Style Sheet)</li>
+                <li>Javascript</li>
+            </ul>
+        </div>
+        <footer>
+            <div class="footer-content">
+                <div class="social-content">
+                    <li>
+                        <a href="https://www.facebook.com/yej.eeb21/" target="_blank" rel="noopen norefferer">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/itsme.jbee29/?__pwa=1" target="_blank" rel="noopen norefferer">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/bernard-arevalo-7903a9261/" target="_blank" rel="noopen norefferer">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/Jbee29" target="_blank" rel="noopen norefferer">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </li>
+                </div>
+                <p>Copyright &COPY; 2024 Bernard T. Arevalo, all copy right</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
