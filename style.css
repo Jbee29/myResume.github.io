@@ -30,9 +30,8 @@ body, html {
     width: 100%;
     height: 100vh;
     position: relative;
-    overflow:visible;
+    overflow: visible;
     scroll-snap-type: y mandatory;
-    padding: 30px;
 }
 
 /* Style for Navigation */
@@ -69,6 +68,51 @@ nav ul li a:hover {
     color: gray;
 }
 
+/* Dropdron style */
+nav .dropdown-content {
+    color: white;
+    font-size: 3rem;
+    cursor: pointer;
+    display: none;
+}
+
+/* Dropdown menu Style */
+.dropdown-menu {
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 500px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    overflow: hidden;
+    display: none;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown-menu.open {
+    height: 300px;
+}
+
+.dropdown-menu li {
+    padding: 0.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .dropdown-menu ul li a {
+    font-family: var(--font-family-1);
+    font-size: 2.5rem;
+    text-decoration: none;
+    color: white;
+}
+
+.dropdown-menu ul li a:hover {
+    color: gray;
+}
+
 /* Style for Class "content" */
 .content {
     width: 100%;
@@ -91,6 +135,8 @@ nav ul li a:hover {
 
 /* Style for Homepage */
 .home-content h1 {
+    width: 1000px;
+    height: 300px;
     font-size: 100px;
     color: white;
     text-align: center;
@@ -146,7 +192,6 @@ nav ul li a:hover {
     font-family: var(--font-family-1);
     color: white;
     font-size: 2rem;
-    padding-right: 10px;
     grid-column: 2;
     align-self: flex-start;
 }
@@ -198,7 +243,6 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 150px;
     width: 100vw;
     z-index: 1;
 }
@@ -290,5 +334,217 @@ footer .footer-content p {
     }
     100% {
       opacity: 1;
+    }
+}
+
+@media (max-width: 1500px) {
+
+    .image1 {
+        width: 550px
+    }
+
+    .image2 {
+        width: 450px;
+    }
+}
+
+/* This is for the screem with min-width of 1024 pixel and max-width of 1200 pixel */
+@media (min-width: 1024px) and (max-width: 1200px) {
+
+    body, html {
+        scroll-behavior: smooth;
+        background-color: black;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: justify;
+        padding: 60px 20px;
+    }
+
+    .me-content h1 {
+        font-size: 3rem;
+    }
+
+    .me-content h2 {
+        font-size: 2rem;
+    }
+
+    .expi-content h1 {
+        font-size: 4.5rem;
+    }
+
+    .expi-content h3 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .expi-content h2 {
+        font-size: 1.7rem;
+    }
+
+    .skill-content h1 {
+        font-size: 4rem;
+    }
+
+    .skill-content li {
+        font-size: 2.5rem;
+    }
+}
+
+/* This for the screen with min-width of 768 pixel and max-width of 1023 pixel */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    body, html {
+        scroll-behavior: smooth;
+        background-color: black;
+    }
+
+    nav ul li{
+        display: none;
+    }
+
+    nav .dropdown-content {
+        display: block;
+        align-items: flex-end;
+        position: fixed;
+    }
+
+    .dropdown-menu {
+        display: block;
+        position: fixed;
+        z-index: 1;
+    }
+
+    .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: justify;
+        padding: 60px 20px;
+    }
+
+    .me-content h1 {
+        font-size: 3rem;
+    }
+
+    .me-content h2 {
+        font-size: 1.7rem;
+    }
+
+    .expi-content h1 {
+        font-size: 3.5rem;
+    }
+
+    .expi-content h3 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .expi-content h2 {
+        font-size: 1.7rem;
+    }
+
+    .image2 {
+        width: 450px;
+    }
+
+    .skill-content h1 {
+        font-size: 4rem;
+    }
+
+    .skill-content li {
+        font-size: 2rem;
+    }
+}
+
+/* For screen of max 768 pixel */
+@media (max-width: 768px) {
+
+    body, html {
+        scroll-behavior: smooth;
+        background-color: black;
+    }
+
+    nav ul li{
+        display: none;
+    }
+
+    nav .dropdown-content {
+        display: block;
+        align-items: flex-end;
+        position: fixed;
+    }
+
+    .dropdown-menu {
+        display: block;
+        position: fixed;
+        z-index: 1;
+    }
+
+    .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: justify;
+        padding: 60px 20px;
+    }
+
+    .home-content h1 {
+        font-size: 5rem;
+    }
+
+    .me-content h1 {
+        font-size: 2rem;
+    }
+
+    .me-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .expi-content h1 {
+        font-size: 3rem;
+    }
+
+    .expi-content h3 {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    .expi-content h2 {
+        font-size: 1rem;
+    }
+
+    .image2 {
+        width: 500px;
+    }
+
+    .skill-content h1 {
+        font-size: 3rem;
+        align-items: center;
+    }
+
+    .skill-content li {
+        font-size: 1.5rem;
+    }
+
+    .logo img{
+        width: 220px;
+    }
+
+    footer .footer-content p {
+        font-size: 1rem;
+    }
+
+    .social-content li a i {
+        font-size: 50px;
     }
 }

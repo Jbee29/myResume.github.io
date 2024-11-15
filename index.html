@@ -19,6 +19,8 @@
     </video>
 
     <div class="container">
+
+        <!-- Here is my Navigator inside of the Header-->
         <header>
             <nav>
                 <ul>
@@ -26,15 +28,27 @@
                     <li><a href="#Me">About Me</a></li>
                     <li><a href="#Experience">Work Experience</a></li>
                     <li><a href="#Skills">Skills</a></li>
-                    <div class="animation start-home"></div>
                 </ul>
+                <div class="dropdown-content">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
             </nav>
+            <div class="dropdown-menu">
+                <ul>
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#Me">About Me</a></li>
+                    <li><a href="#Experience">Work Experience</a></li>
+                    <li><a href="#Skills">Skills</a></li>
+                </ul>
+            </div>
         </header>
 
+        <!-- This my homepage -->
         <div class="home-content content" id="Home">
             <h1>Welcome to my Resume Website</h1>
         </div>
         
+        <!-- This my About Me -->
         <div class="me-content content" id="Me">
             <h1>Hi, I'm Bernard T. Arevalo</h1>
             <h2>
@@ -45,6 +59,7 @@
             <img class="image image1 slide-right " src="/images/rb_3863.png" alt="person">
         </div>
 
+        <!-- The Work Experience -->
         <div class="expi-content content" id="Experience">
             <h1>Surveillance Operator</h1>
             <h3>Paramount Human Resources Multi-Purpose Cooperative <br>(June 16, 2018 - June 30, 2024)</h3>
@@ -57,9 +72,11 @@
                 This integral responsibility is crucial for upholding the safety and security of the property and premises, as it allows for continuous 
                 surveillance and timely response to any security-related incidents.
             </h2>
-            <img class="image image2 slide-left" src="/images/rb_13665.png" alt="Monitor with CCTV Camera inside">
+            <!-- This is the image in the Work Experience -->
+            <img class="image image2 slide-left" src="/images/cctv.png" alt="Monitor with CCTV Camera inside">
         </div>
 
+        <!-- The Skills acquired by watching online courses -->
         <div class="skill-content content" id="Skills">
             <h1>
                 Knowlegdeable in:
@@ -75,6 +92,8 @@
                 <li>Javascript</li>
             </ul>
         </div>
+
+        <!-- And this my Footer -->
         <footer>
             <div class="footer-content">
                 <div class="social-content">
@@ -104,6 +123,7 @@
         </footer>
     </div>
 
+    <!-- The Javascript -->
     <script src="main.js"></script>
 </body>
 </html>

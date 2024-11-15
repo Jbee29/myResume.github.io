@@ -1,3 +1,4 @@
+// Function for image animation
 const scrollElements = document.querySelectorAll(".image");
 
 const elementInView = (el, dividend = 1) => {
@@ -39,3 +40,18 @@ const handleScrollAnimation = () => {
 window.addEventListener("scroll", () => { 
   handleScrollAnimation();
 });
+
+// Function for dropdown
+const dropDownBtn = document.querySelector(".dropdown-content")
+const btnIcon = document.querySelector(".dropdown-content i")
+const dropDownMenu = document.querySelector(".dropdown-menu")
+
+dropDownBtn.onclick = function() {
+  dropDownMenu.classList.toggle("open")
+  const isOpen = dropDownMenu.classList.contains("open")
+
+  btnIcon.classList = isOpen
+    ?"fa-solid fa-xmark"
+    :"fa-solid fa-bars"
+
+}
