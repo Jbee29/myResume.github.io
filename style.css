@@ -574,6 +574,10 @@ footer .footer-content p {
         position: fixed;
         z-index: 1;
     }
+    
+    .dropdown-menu.open {
+        height: 250px;
+    }
 
     header .dropdown-menu ul li a {
         font-family: var(--font-family-1);
@@ -595,15 +599,15 @@ footer .footer-content p {
     }
 
     .me-content h1 {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 
     .me-content h2 {
-        font-size: 0.7rem;
+        font-size: 1.3rem;
     }
 
     .image1 {
-        width: 270px;
+        width: 300px;
     }
 
     .expi-content h1 {
